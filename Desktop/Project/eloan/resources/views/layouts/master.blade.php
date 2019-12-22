@@ -109,7 +109,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-stream"></i>
                             <p>Organisation Level</p>
                             </a>
@@ -144,16 +144,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <a href="#" class="nav-link">
                             <i class="nav-icon fab fa-r-project"></i>
                             <p>Manager Roles</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-user-plus"></i>
-                            <p>Create Use</p>
-                            </a>
+                            <router-link to="/users" class="nav-link">
+                              <i class="nav-icon fas fa-user-plus"></i>
+                              <p>Create Use</p>
+                            </router-link>
                         </li>
                     </ul>
                 </li>
@@ -308,7 +308,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <a class="nav-link" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
-                    <i class=" nav-icon fas fa-power-off"></i>
+                    <i class=" nav-icon fas fa-power-off red"></i>
                     <p> {{ __('Logout') }}</p>
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
