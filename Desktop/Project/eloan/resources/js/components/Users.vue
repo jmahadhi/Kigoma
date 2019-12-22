@@ -60,25 +60,112 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group">
-                        <label>First Name</label>
-                        <input v-model="form.firstName" type="text" name="firstName"
-                            class="form-control" :class="{ 'is-invalid': form.errors.has('firstName') }">
-                        <has-error :form="form" field="firstName"></has-error>
+                    <div class="form-row">
+                        <div class="form-group mr-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="nav-icon fas fa-user-tie"></i>
+                                    </span>
+                                </div>
+                                <input v-model="form.userName" type="text" name="userName"
+                                    placeholder="Enter User Name" class="form-control" 
+                                    :class="{ 'is-invalid': form.errors.has('userName') }">
+                                    <has-error :form="form" field="userName"></has-error>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="nav-icon fas fa-user"></i>
+                                    </span>
+                                </div>
+                                <input v-model="form.firstName" type="text" name="firstName"
+                                    placeholder="Enter First Name" class="form-control" 
+                                    :class="{ 'is-invalid': form.errors.has('firstName') }">
+                                    <has-error :form="form" field="firstName"></has-error>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label>Middle Name</label>
-                        <input v-model="form.middleName" type="text" name="middleName"
-                            class="form-control" :class="{ 'is-invalid': form.errors.has('middleName') }">
-                        <has-error :form="form" field="middleName"></has-error>
+                    <div class="form-row">
+                        <div class="form-group mr-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="nav-icon fas fa-user"></i>
+                                    </span>
+                                </div>
+                                <input v-model="form.middleName" type="text" name="middleName" 
+                                    placeholder="Enter Middle Name" required
+                                        class="form-control" :class="{ 'is-invalid': form.errors.has('middleName') }">
+                                    <has-error :form="form" field="middleName"></has-error>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="nav-icon fas fa-user"></i>
+                                    </span>
+                                </div>
+                                <input v-model="form.lastName" type="text" name="lastName"
+                                    placeholder="Enter Last Name"
+                                    class="form-control" :class="{ 'is-invalid': form.errors.has('lastName') }">
+                                    <has-error :form="form" field="lastName"></has-error>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label>Last Name</label>
-                        <input v-model="form.lastName" type="text" name="lastName"
-                            class="form-control" :class="{ 'is-invalid': form.errors.has('lastName') }">
-                        <has-error :form="form" field="lastName"></has-error>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">@</span>
+                                </div>
+                                <input v-model="form.lastName" type="email" name="emailAddress"
+                                    placeholder="Enter Email Address"
+                                    class="form-control" :class="{ 'is-invalid': form.errors.has('emailAddress') }">
+                                <has-error :form="form" field="emailAddress"></has-error>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group mr-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="nav-icon fas fa-map-marker-alt"></i>
+                                    </span>
+                                </div>
+                                <select class="form-control" id="organisationLevel" name="organisationLevel">
+                                    <option>Select organisation Level</option>
+                                    <option value="1">National</option>
+                                    <option value="2">Regiional</option>
+                                    <option value="3">District</option>
+                                </select>
+                            </div>                     
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="nav-icon fas fa-user-tag"></i>
+                                    </span>
+                                </div>
+                                <select class="form-control" id="UserRole" name="UserRole">
+                                    <option>Select User Role</option>
+                                    <option value="1">Super Admin</option>
+                                    <option value="2">Admin</option>
+                                    <option value="3">User</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -101,6 +188,9 @@
                     firstName: '',
                     middleName: '',
                     lastName: '',
+                    emailAddress: '',
+                    organisationLevel: '',
+                    userRole: '',
 
                 })
             }

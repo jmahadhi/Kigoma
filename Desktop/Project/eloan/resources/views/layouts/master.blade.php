@@ -144,13 +144,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                            <i class="nav-icon fab fa-r-project"></i>
-                            <p>Manager Roles</p>
-                            </a>
+                            <router-link to="/role" class="nav-link">
+                              <i class="nav-icon fab fa-r-project"></i>
+                                <p>Manager Roles</p>
+                            </arouter-link>
                         </li>
                         <li class="nav-item">
-                            <router-link to="/users" class="nav-link">
+                            <router-link to="/user" class="nav-link">
                               <i class="nav-icon fas fa-user-plus"></i>
                               <p>Create Use</p>
                             </router-link>
