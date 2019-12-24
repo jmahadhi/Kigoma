@@ -118,21 +118,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
                         <li class="nav-item">
                             <router-link to="/organisationUnit" class="nav-link">
-                            <i class="nav-icon fas fa-sort-amount-down-alt"></i>
-                            <p>Organisation Unit</p>
+                              <i class="nav-icon fas fa-sort-amount-down-alt"></i>
+                              <p>Organisation Unit</p>
                             </router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-hourglass-half"></i>
-                            <p>Financial Year</p>
-                            </a>
+                            <router-link to="/financialYear" class="nav-link">
+                              <i class="nav-icon fas fa-hourglass-half"></i>
+                              <p>Financial Year</p>
+                            </router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-clock"></i>
-                            <p>Quarter</p>
-                            </a>
+                            <router-link to="/quarter" class="nav-link">
+                              <i class="nav-icon fas fa-clock"></i>
+                              <p>Quarter</p>
+                            </router-link>
                         </li>
                     </ul>
                 </li>
@@ -152,7 +152,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </arouter-link>
                         </li>
                         <li class="nav-item">
-                            <router-link to="/userrouter-link" class="nav-link">
+                            <router-link to="/user" class="nav-link">
                               <i class="nav-icon fas fa-user-plus"></i>
                               <p>Create Use</p>
                             </router-link>
@@ -167,18 +167,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                            <router-link to="/groupDetails" class="nav-link">
+                                <i class=" nav-icon fas fa-list-ol"></i>
+                                <p>Group Details</p>
+                            </router-link>
+                        </li>
+
                         <li class="nav-item">
                             <a href="#" class="nav-link active">
                                 <i class="nav-icon fas fa-layer-group"></i>
                                 <p>Register Group</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class=" nav-icon fas fa-list-ol"></i>
-                                <p>Group List</p>
-                            </a>
-                        </li>
+                        
                     </ul>
                 </li>
               <li class="nav-item has-treeview menu-close">

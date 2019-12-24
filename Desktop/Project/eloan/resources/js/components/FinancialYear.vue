@@ -4,10 +4,10 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">List of Organisation Unit</h3>
+                <h3 class="card-title">Registed Financial Year</h3>
 
                 <div class="card-tools">
-                    <button class="btn btn-success" data-toggle="modal" data-target="#CreateOrganUnit">
+                    <button class="btn btn-success" data-toggle="modal" data-target="#CreateFinancialYear">
                         <i class="nav-icon fas fa-user-plus"></i>
                         Add New
                     </button>
@@ -19,18 +19,22 @@
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Organisation Level</th>
-                      <th>Unit Code</th>
-                      <th>Organisation Name</th>
+                      <th>Code</th>
+                      <th>Name</th>
+                      <th>Status</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>183</td>
-                       <td>Tanzania</td>
-                      <td> OgCode01</td>
-                      <td>National</td>
+                      <td> 001</td>
+                      <td>2021/2022</td>
+                      <td>
+                          <a href="#">
+                              <i class="nav-icon fas fa-lock"></i>
+                          </a>
+                      </td>
                       <td>
                           <a href="#">
                               <i class="nav-icon fa fa-edit green"></i>
@@ -43,39 +47,13 @@
 
                      <tr>
                       <td>183</td>
-                       <td>Kigoma</td>
-                      <td> OgCode02</td>
-                      <td>Regional</td>
-                      <td>
+                      <td> 002</td>
+                      <td>2022/2023</td>
+                       <td>
                           <a href="#">
-                              <i class="nav-icon fa fa-edit green"></i>
-                          </a> |
-                          <a href="#" >
-                              <i class="nav-icon fa fa-trash red"></i>
+                              <i class="nav-icon fas fa-lock-open"></i>
                           </a>
                       </td>
-                    </tr>
-
-                     <tr>
-                      <td>183</td>
-                       <td>Buhigwe Dc</td>
-                      <td> OgCode03</td>
-                      <td>District</td>
-                      <td>
-                          <a href="#">
-                              <i class="nav-icon fa fa-edit green"></i>
-                          </a> |
-                          <a href="#" >
-                              <i class="nav-icon fa fa-trash red"></i>
-                          </a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>184</td>
-                       <td>Buhigwe</td>
-                      <td> OgCode04</td>
-                      <td>LGA</td>
                       <td>
                           <a href="#">
                               <i class="nav-icon fa fa-edit green"></i>
@@ -95,11 +73,11 @@
         </div>
 
                 <!-- Modal -->
-        <div class="modal fade" id="CreateOrganUnit" tabindex="-1" role="dialog" aria-labelledby="CreateOrganUnitModal" aria-hidden="true">
+        <div class="modal fade" id="CreateFinancialYear" tabindex="-1" role="dialog" aria-labelledby="CreateFinancialYearModal" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="CreateOrganUnitModal">Add Unit </h5>
+                    <h5 class="modal-title" id="CreateFinancialYearModal">Add Unit </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
@@ -110,30 +88,13 @@
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">
-                                    <i class="nav-icon fas fa-user-tag"></i>
-                                </span>
-                            </div>
-                            <select class="form-control" id="UserRole" name="organisationName">
-                                <option>Select Organisation Name</option>
-                                <option value="1">Tanzania</option>
-                                <option value="2">Dar Es Salaam</option>
-                                <option value="3">Mbeya</option>
-                                <option value="4">Kigoma</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
                                     <i class="nav-icon fas fa-sort-numeric-up"></i>
                                 </span>
                             </div>
-                            <input v-model="form.firstName" type="text" name="organLevelCode" 
+                            <input v-model="form.firstName" type="text" name="fnCode" 
                                  placeholder="Enter Organisation Code"
-                                 class="form-control" :class="{ 'is-invalid': form.errors.has('organLevelCode') }">
-                        <has-error :form="form" field="organLevelCode"></has-error>
+                                 class="form-control" :class="{ 'is-invalid': form.errors.has('fnCode') }">
+                        <has-error :form="form" field="fnCode"></has-error>
                         </div>
                     </div>
 
@@ -144,10 +105,10 @@
                                     <i class="nav-icon fas fa-puzzle-piece"></i>
                                 </span>
                             </div>
-                            <input v-model="form.middleName" type="text" name="orgName"
+                            <input v-model="form.middleName" type="text" name="fnName"
                                 placeholder="Enter Organisation Name"
-                                class="form-control" :class="{ 'is-invalid': form.errors.has('orgName') }">
-                        <has-error :form="form" field="orgName"></has-error>
+                                class="form-control" :class="{ 'is-invalid': form.errors.has('fnName') }">
+                        <has-error :form="form" field="fnName"></has-error>
                         </div>
                     </div>
 
@@ -171,8 +132,8 @@
         data() {
             return {
                 form : new Form({
-                    organLevelCode: '',
-                    orgName: '',
+                    fnCode: '',
+                    fnName: '',
 
                 })
             }

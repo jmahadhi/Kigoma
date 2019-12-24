@@ -24,7 +24,11 @@ let routes = [
     { path: '/user', component: require('./components/Users.vue').default},
     { path: '/profile', component: require('./components/Profile.vue').default },
     { path: '/organisationLevel', component: require('./components/OrganisationLevel.vue').default},
-    { path: '/organisationUnit', component: require('./components/OrganisationUnit.vue').default}
+    { path: '/organisationUnit', component: require('./components/OrganisationUnit.vue').default},
+    { path: '/financialYear', component: require('./components/FinancialYear.vue').default},
+    { path: '/quarter', component: require('./components/Quarter.vue').default},
+    { path: '/groupDetails', component: require('./components/GroupDetails.vue').default},
+    { path: '/previewMember', component: require('./components/PreviewMember.vue').default},
   ]
 
 const router = new VueRouter({
