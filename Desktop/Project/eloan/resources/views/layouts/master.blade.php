@@ -109,16 +109,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-stream"></i>
-                            <p>Organisation Level</p>
-                            </a>
+                            <router-link to="/organisationLevel" class="nav-link">
+                              <i class="nav-icon fas fa-stream"></i>
+                              <p>Organisation Level</p>
+                            </router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <router-link to="/organisationUnit" class="nav-link">
                             <i class="nav-icon fas fa-sort-amount-down-alt"></i>
                             <p>Organisation Unit</p>
-                            </a>
+                            </router-link>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -150,7 +150,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </arouter-link>
                         </li>
                         <li class="nav-item">
-                            <router-link to="/user" class="nav-link">
+                            <router-link to="/userrouter-link" class="nav-link">
                               <i class="nav-icon fas fa-user-plus"></i>
                               <p>Create Use</p>
                             </router-link>

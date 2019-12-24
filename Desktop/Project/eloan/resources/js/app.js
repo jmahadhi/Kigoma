@@ -23,6 +23,8 @@ let routes = [
     { path: '/role', component: require('./components/UserRoles.vue').default },
     { path: '/user', component: require('./components/Users.vue').default},
     { path: '/profile', component: require('./components/Profile.vue').default },
+    { path: '/organisationLevel', component: require('./components/OrganisationLevel.vue').default},
+    { path: '/organisationUnit', component: require('./components/OrganisationUnit.vue').default}
   ]
 
 const router = new VueRouter({

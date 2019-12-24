@@ -1912,6 +1912,367 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/OrganisationLevel.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/OrganisationLevel.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      form: new Form({
+        organLevelCode: '',
+        orgName: ''
+      })
+    };
+  },
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/OrganisationUnit.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/OrganisationUnit.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      form: new Form({
+        organLevelCode: '',
+        orgName: ''
+      })
+    };
+  },
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Profile.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Profile.vue?vue&type=script&lang=js& ***!
@@ -38794,6 +39155,739 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/OrganisationLevel.vue?vue&type=template&id=9c530a22&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/OrganisationLevel.vue?vue&type=template&id=9c530a22& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container pt-5" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        attrs: {
+          id: "CreateOrganLevel",
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "CreateOrganLevelModal",
+          "aria-hidden": "true"
+        }
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "modal-dialog modal-dialog-centered",
+            attrs: { role: "document" }
+          },
+          [
+            _c("div", { staticClass: "modal-content" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: "modal-body" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "div",
+                    { staticClass: "input-group" },
+                    [
+                      _vm._m(2),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.form.firstName,
+                            expression: "form.firstName"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        class: {
+                          "is-invalid": _vm.form.errors.has("organLevelCode")
+                        },
+                        attrs: {
+                          type: "text",
+                          name: "organLevelCode",
+                          placeholder: "Enter Organisation Code"
+                        },
+                        domProps: { value: _vm.form.firstName },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.form, "firstName", $event.target.value)
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("has-error", {
+                        attrs: { form: _vm.form, field: "organLevelCode" }
+                      })
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "div",
+                    { staticClass: "input-group" },
+                    [
+                      _vm._m(3),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.form.middleName,
+                            expression: "form.middleName"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        class: { "is-invalid": _vm.form.errors.has("orgName") },
+                        attrs: {
+                          type: "text",
+                          name: "orgName",
+                          placeholder: "Enter Organisation Name"
+                        },
+                        domProps: { value: _vm.form.middleName },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.form,
+                              "middleName",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("has-error", {
+                        attrs: { form: _vm.form, field: "orgName" }
+                      })
+                    ],
+                    1
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _vm._m(4)
+            ])
+          ]
+        )
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _c("h3", { staticClass: "card-title" }, [
+              _vm._v("List of Organisation Level")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-tools" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-success",
+                  attrs: {
+                    "data-toggle": "modal",
+                    "data-target": "#CreateOrganLevel"
+                  }
+                },
+                [
+                  _c("i", { staticClass: "nav-icon fas fa-user-plus" }),
+                  _vm._v("\n                    Add New\n                ")
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body table-responsive p-0" }, [
+            _c("table", { staticClass: "table table-hover" }, [
+              _c("thead", [
+                _c("tr", [
+                  _c("th", [_vm._v("ID")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Organisation Code")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Organisation Name")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Actions")])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [_vm._v("183")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(" OgCode01")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("National")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("i", { staticClass: "nav-icon fa fa-edit green" })
+                    ]),
+                    _vm._v(" |\n                      "),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("i", { staticClass: "nav-icon fa fa-trash red" })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("183")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(" OgCode02")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Regional")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("i", { staticClass: "nav-icon fa fa-edit green" })
+                    ]),
+                    _vm._v(" |\n                      "),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("i", { staticClass: "nav-icon fa fa-trash red" })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("183")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(" OgCode03")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("District")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("i", { staticClass: "nav-icon fa fa-edit green" })
+                    ]),
+                    _vm._v(" |\n                      "),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("i", { staticClass: "nav-icon fa fa-trash red" })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("184")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(" OgCode04")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("LGA")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("i", { staticClass: "nav-icon fa fa-edit green" })
+                    ]),
+                    _vm._v(" |\n                      "),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("i", { staticClass: "nav-icon fa fa-trash red" })
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "h5",
+        { staticClass: "modal-title", attrs: { id: "CreateOrganLevelModal" } },
+        [_vm._v("Add Roles ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "nav-icon fas fa-sort-numeric-up" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "nav-icon fas fa-puzzle-piece" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-footer" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-danger",
+          attrs: { type: "button", "data-dismiss": "modal" }
+        },
+        [
+          _c("i", { staticClass: "nav-icon fas fa-window-close fa-fw" }),
+          _vm._v("Close")
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn btn-primary", attrs: { type: "button" } },
+        [
+          _c("i", { staticClass: "nav-icon fas fa-save fa-fw" }),
+          _vm._v("Create")
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/OrganisationUnit.vue?vue&type=template&id=a5d2162e&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/OrganisationUnit.vue?vue&type=template&id=a5d2162e& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container pt-5" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        attrs: {
+          id: "CreateOrganUnit",
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "CreateOrganUnitModal",
+          "aria-hidden": "true"
+        }
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "modal-dialog modal-dialog-centered",
+            attrs: { role: "document" }
+          },
+          [
+            _c("div", { staticClass: "modal-content" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: "modal-body" }, [
+                _vm._m(2),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "div",
+                    { staticClass: "input-group" },
+                    [
+                      _vm._m(3),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.form.firstName,
+                            expression: "form.firstName"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        class: {
+                          "is-invalid": _vm.form.errors.has("organLevelCode")
+                        },
+                        attrs: {
+                          type: "text",
+                          name: "organLevelCode",
+                          placeholder: "Enter Organisation Code"
+                        },
+                        domProps: { value: _vm.form.firstName },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.form, "firstName", $event.target.value)
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("has-error", {
+                        attrs: { form: _vm.form, field: "organLevelCode" }
+                      })
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "div",
+                    { staticClass: "input-group" },
+                    [
+                      _vm._m(4),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.form.middleName,
+                            expression: "form.middleName"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        class: { "is-invalid": _vm.form.errors.has("orgName") },
+                        attrs: {
+                          type: "text",
+                          name: "orgName",
+                          placeholder: "Enter Organisation Name"
+                        },
+                        domProps: { value: _vm.form.middleName },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.form,
+                              "middleName",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("has-error", {
+                        attrs: { form: _vm.form, field: "orgName" }
+                      })
+                    ],
+                    1
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _vm._m(5)
+            ])
+          ]
+        )
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _c("h3", { staticClass: "card-title" }, [
+              _vm._v("List of Organisation Unit")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-tools" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-success",
+                  attrs: {
+                    "data-toggle": "modal",
+                    "data-target": "#CreateOrganUnit"
+                  }
+                },
+                [
+                  _c("i", { staticClass: "nav-icon fas fa-user-plus" }),
+                  _vm._v("\n                    Add New\n                ")
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body table-responsive p-0" }, [
+            _c("table", { staticClass: "table table-hover" }, [
+              _c("thead", [
+                _c("tr", [
+                  _c("th", [_vm._v("ID")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Organisation Level")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Unit Code")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Organisation Name")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Actions")])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [_vm._v("183")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Tanzania")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(" OgCode01")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("National")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("i", { staticClass: "nav-icon fa fa-edit green" })
+                    ]),
+                    _vm._v(" |\n                      "),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("i", { staticClass: "nav-icon fa fa-trash red" })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("183")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Kigoma")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(" OgCode02")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Regional")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("i", { staticClass: "nav-icon fa fa-edit green" })
+                    ]),
+                    _vm._v(" |\n                      "),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("i", { staticClass: "nav-icon fa fa-trash red" })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("183")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Buhigwe DcCreateOrganUnit")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(" OgCode03")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("District")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("i", { staticClass: "nav-icon fa fa-edit green" })
+                    ]),
+                    _vm._v(" |\n                      "),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("i", { staticClass: "nav-icon fa fa-trash red" })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("184")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Buhigwe")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(" OgCode04")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("LGA")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("i", { staticClass: "nav-icon fa fa-edit green" })
+                    ]),
+                    _vm._v(" |\n                      "),
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("i", { staticClass: "nav-icon fa fa-trash red" })
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "h5",
+        { staticClass: "modal-title", attrs: { id: "CreateOrganUnitModal" } },
+        [_vm._v("Add Unit ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c("div", { staticClass: "input-group" }, [
+        _c("div", { staticClass: "input-group-prepend" }, [
+          _c("span", { staticClass: "input-group-text" }, [
+            _c("i", { staticClass: "nav-icon fas fa-user-tag" })
+          ])
+        ]),
+        _vm._v(" "),
+        _c(
+          "select",
+          {
+            staticClass: "form-control",
+            attrs: { id: "UserRole", name: "organisationName" }
+          },
+          [
+            _c("option", [_vm._v("Select Organisation Name")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "1" } }, [_vm._v("Tanzania")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "2" } }, [_vm._v("Dar Es Salaam")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "3" } }, [_vm._v("Mbeya")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "4" } }, [_vm._v("Kigoma")])
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "nav-icon fas fa-sort-numeric-up" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "nav-icon fas fa-puzzle-piece" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-footer" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-danger",
+          attrs: { type: "button", "data-dismiss": "modal" }
+        },
+        [
+          _c("i", { staticClass: "nav-icon fas fa-window-close fa-fw" }),
+          _vm._v("Close")
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn btn-primary", attrs: { type: "button" } },
+        [
+          _c("i", { staticClass: "nav-icon fas fa-save fa-fw" }),
+          _vm._v("Create")
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Profile.vue?vue&type=template&id=3bd692e4&":
 /*!**********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Profile.vue?vue&type=template&id=3bd692e4& ***!
@@ -54792,6 +55886,12 @@ var routes = [{
 }, {
   path: '/profile',
   component: __webpack_require__(/*! ./components/Profile.vue */ "./resources/js/components/Profile.vue")["default"]
+}, {
+  path: '/organisationLevel',
+  component: __webpack_require__(/*! ./components/OrganisationLevel.vue */ "./resources/js/components/OrganisationLevel.vue")["default"]
+}, {
+  path: '/organisationUnit',
+  component: __webpack_require__(/*! ./components/OrganisationUnit.vue */ "./resources/js/components/OrganisationUnit.vue")["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
@@ -55003,6 +56103,144 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/OrganisationLevel.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/OrganisationLevel.vue ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _OrganisationLevel_vue_vue_type_template_id_9c530a22___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./OrganisationLevel.vue?vue&type=template&id=9c530a22& */ "./resources/js/components/OrganisationLevel.vue?vue&type=template&id=9c530a22&");
+/* harmony import */ var _OrganisationLevel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./OrganisationLevel.vue?vue&type=script&lang=js& */ "./resources/js/components/OrganisationLevel.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _OrganisationLevel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _OrganisationLevel_vue_vue_type_template_id_9c530a22___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _OrganisationLevel_vue_vue_type_template_id_9c530a22___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/OrganisationLevel.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/OrganisationLevel.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/OrganisationLevel.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganisationLevel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./OrganisationLevel.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/OrganisationLevel.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganisationLevel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/OrganisationLevel.vue?vue&type=template&id=9c530a22&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/OrganisationLevel.vue?vue&type=template&id=9c530a22& ***!
+  \**************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganisationLevel_vue_vue_type_template_id_9c530a22___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./OrganisationLevel.vue?vue&type=template&id=9c530a22& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/OrganisationLevel.vue?vue&type=template&id=9c530a22&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganisationLevel_vue_vue_type_template_id_9c530a22___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganisationLevel_vue_vue_type_template_id_9c530a22___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/OrganisationUnit.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/OrganisationUnit.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _OrganisationUnit_vue_vue_type_template_id_a5d2162e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./OrganisationUnit.vue?vue&type=template&id=a5d2162e& */ "./resources/js/components/OrganisationUnit.vue?vue&type=template&id=a5d2162e&");
+/* harmony import */ var _OrganisationUnit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./OrganisationUnit.vue?vue&type=script&lang=js& */ "./resources/js/components/OrganisationUnit.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _OrganisationUnit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _OrganisationUnit_vue_vue_type_template_id_a5d2162e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _OrganisationUnit_vue_vue_type_template_id_a5d2162e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/OrganisationUnit.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/OrganisationUnit.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/OrganisationUnit.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganisationUnit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./OrganisationUnit.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/OrganisationUnit.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganisationUnit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/OrganisationUnit.vue?vue&type=template&id=a5d2162e&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/OrganisationUnit.vue?vue&type=template&id=a5d2162e& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganisationUnit_vue_vue_type_template_id_a5d2162e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./OrganisationUnit.vue?vue&type=template&id=a5d2162e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/OrganisationUnit.vue?vue&type=template&id=a5d2162e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganisationUnit_vue_vue_type_template_id_a5d2162e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganisationUnit_vue_vue_type_template_id_a5d2162e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
