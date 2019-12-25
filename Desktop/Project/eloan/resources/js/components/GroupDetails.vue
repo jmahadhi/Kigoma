@@ -36,12 +36,14 @@
                       <td>Kibwigwa</td>
                       <td>Kinje</td>
                       <td>
-                          <button class="nav-icon fas fa-registered btn btn-success"
-                           data-toggle="modal" data-target="#RegisterMember">Register</button>
+                        <button class="btn btn-success" data-toggle="modal" data-target="#RegisterMember">
+                            <i class="nav-icon fas fa-registered"></i> Register</button>
                       </td>
                       <td>
-                          <button class="nav-icon fas fa-registered btn btn-info"
-                          data-toggle="modal" data-target="#PreviewMember">Member</button>
+                           <router-link to="/previewMember">
+                             <button class="btn btn-info">
+                                <i class="nav-icon fab fa-monero"></i> Member</button>
+                          </router-link>
                       </td>
                       <td>
                           <a href="#">
@@ -63,12 +65,14 @@
                       <td>Kibwigwa</td>
                       <td>Kinje</td>
                       <td>
-                          <button class="nav-icon fas fa-registered btn btn-success" 
-                          data-toggle="modal" data-target="#RegisterMember">Register</button>
+                        <button class="btn btn-success" data-toggle="modal" data-target="#RegisterMember">
+                            <i class="nav-icon fas fa-registered"></i> Register</button>
                       </td>
                       <td>
-                          <button class="nav-icon fas fa-registered btn btn-info" 
-                          data-toggle="modal" data-target="#PreviewMember">Member</button>
+                           <router-link to="/previewMember">
+                             <button class="btn btn-info">
+                                <i class="nav-icon fab fa-monero"></i> Member</button>
+                          </router-link>
                       </td>
                       <td>
                           <a href="#">
@@ -90,11 +94,14 @@
                       <td>Kibwigwa</td>
                       <td>Kinje</td>
                       <td>
-                          <button class="nav-icon fas fa-registered btn btn-success" 
-                          data-toggle="modal" data-target="#RegisterMember">Register</button>
+                        <button class="btn btn-success" data-toggle="modal" data-target="#RegisterMember">
+                            <i class="nav-icon fas fa-registered"></i> Register</button>
                       </td>
                       <td>
-                          <button class="nav-icon fas fa-registered  btn btn-info">Member</button>
+                           <router-link to="/previewMember">
+                             <button class="btn btn-info">
+                                <i class="nav-icon fab fa-monero"></i> Member</button>
+                          </router-link>
                       </td>
                       <td>
                           <router-link to="./previewMember">
@@ -351,70 +358,6 @@
             </div>
         </div>
         <!-- end here -->
-
-        <!--- Start Modal for Preview Group Member-->
-        <div class="modal fade" id="PreviewMember" tabindex="-1" role="dialog" aria-labelledby="PreviewMemberModal" aria-hidden="true">
-            <div class="modal-dialog-pre modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="PreviewMemberModal">Preview Group Member: <span class="strong">[Group Name]</span> </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="card-body table-responsive p-0">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                    <th>No.</th>
-                                    <th>Group Name</th>
-                                    <th>Full Name</th>
-                                    <th>Group Type</th>
-                                    <th>Role</th>
-                                    <th>phone Number</th>
-                                    <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>183</td>
-                                        <td>Wakiber</td>
-                                        <td>John Doe</td>
-                                        <td>Women</td>
-                                        <td>Chairman</td>
-                                        <td>+255 714708087</td>
-                                        <td>
-                                            <button class="nav-icon fas fa-registered btn btn-success"
-                                            data-toggle="modal" data-target="#RegisterMember">Register</button>
-                                        </td>
-                                        <td>
-                                            <button class="nav-icon fas fa-registered btn btn-info"
-                                            data-toggle="modal" data-target="#PreviewMember">Member</button>
-                                        </td>
-                                        <td>
-                                            <a href="#">
-                                                <i class="nav-icon fa fa-edit green" data-toggle="tooltip" data-placement="top" title="Edit"></i>
-                                            </a> |
-                                            <a href="#" >
-                                                <i class="nav-icon fa fa-trash red" data-toggle="tooltip" data-placement="right" title="Delete"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>    
-                        </div>
-                    </div>
-                    <!-- <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">
-                            <i class="nav-icon fas fa-window-close fa-fw"></i>Close</button>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-
-
-        <!--- End here Modal for Preview--->
     </div>
 </template>
 

@@ -29,6 +29,8 @@ let routes = [
     { path: '/quarter', component: require('./components/Quarter.vue').default},
     { path: '/groupDetails', component: require('./components/GroupDetails.vue').default},
     { path: '/previewMember', component: require('./components/PreviewMember.vue').default},
+    { path: '/fundReceivable', component: require('./components/FundReceivable.vue').default},
+    { path: '/loans', component: require('./components/Loans.vue').default},
   ]
 
 const router = new VueRouter({

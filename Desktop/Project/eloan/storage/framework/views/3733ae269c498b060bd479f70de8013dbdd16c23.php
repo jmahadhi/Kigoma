@@ -192,10 +192,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                      <a href="#" class="nav-link">
+                      <router-link to="/fundReceivable" class="nav-link">
                       <i class="nav-icon fas fa-donate"></i>
                           <p>Funds Receivable</p>
-                      </a>
+                      </router-link>
                   </li>
                   <li class="nav-item">
                       <a href="#" class="nav-link">
@@ -212,12 +212,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </ul>
               </li>
               <li class="nav-item has-treeview menu-close">
-                <a href="#" class="nav-link">
+                <router-link to="/loans" class="nav-link">
                 <i class="nav-icon fas fa-hand-holding-usd"></i>
                     <p> Loans
                         <i class="right fas fa-angle-left"></i>
                     </p>
-                </a>
+                </router-link>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
                         <a href="#" class="nav-link">

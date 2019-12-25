@@ -1,53 +1,59 @@
 <template>
-     <div class="container pt-5">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">List of Registered Users</h3>
-
-                <div class="card-tools">
-                    <button class="btn btn-success" data-toggle="modal" data-target="#createUser">
-                        <i class="nav-icon fas fa-user-plus"></i>
-                        Add New
-                    </button>
-                </div>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body table-responsive p-0">
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>User</th>
-                      <th>Date</th>
-                      <th>Status</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>183</td>
-                      <td>John Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-success">Approved</span></td>
-                      <td>
-                          <a href="#">
-                              <i class="nav-icon fa fa-edit green"></i>
-                          </a> |
-                          <a href="#">
-                              <i class="nav-icon fa fa-trash red"></i>
-                          </a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.card-body -->
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">List of Registered Users!!!</h3>
+            <div class="card-tools">
+              <button class="btn btn-success" data-toggle="modal" data-target="#RegisterMember">
+                <i class="nav-icon fas fa-user-plus"></i>
+                  Add New
+              </button>
             </div>
-            <!-- /.card -->
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body table-responsive p-0">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>User</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>183</td>
+                  <td>John Doe</td>
+                  <td>11-7-2014</td>
+                  <td><span class="tag tag-success">Approved</span></td>
+                  <td>
+                      <a href="#">
+                          <i class="nav-icon fa fa-edit green"></i>
+                      </a> |
+                      <a href="#">
+                          <i class="nav-icon fa fa-trash red"></i>
+                      </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
+        <router-link to="/groupDetails">
+           <button class="btn btn-danger">
+            <i class="nav-icon fas fa-backward fa-fw"></i>
+            Back</button>
+        </router-link>
+         
+           <!-- /.card-body -->
+      </div>
+            <!-- /.card -->
+    </div>
+  </div>
 </template>
 
 <script>
