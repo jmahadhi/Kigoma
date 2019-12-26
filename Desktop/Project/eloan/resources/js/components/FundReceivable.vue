@@ -65,6 +65,12 @@
                                         </a>
                                     </td>
                                 </tr>
+                                <tr class="font-weight-bold">
+                                    <td>Amount</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>0.0</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

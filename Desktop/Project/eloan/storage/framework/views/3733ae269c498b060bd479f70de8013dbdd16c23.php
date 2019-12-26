@@ -111,6 +111,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
+                          <router-link to="/organisationGroup" class="nav-link">
+                          <i class="nav-icon fas fa-object-ungroup"></i>
+                            <p>Organisation Group</p>
+                          </router-link>
+                        </li>
+                    
+                        <li class="nav-item">
                             <router-link to="/organisationLevel" class="nav-link">
                               <i class="nav-icon fas fa-stream"></i>
                               <p>Organisation Level</p>
@@ -204,26 +211,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a href="#" class="nav-link">
+                      <router-link to="/fundSource" class="nav-link">
                           <i class="nav-icon fas fa-list-alt"></i>
                           <p>Funds Source Listing</p>
-                      </a>
+                      </router-link>
                   </li>
                 </ul>
               </li>
               <li class="nav-item has-treeview menu-close">
-                <router-link to="/loans" class="nav-link">
-                <i class="nav-icon fas fa-hand-holding-usd"></i>
+                  <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-hand-holding-usd"></i>
                     <p> Loans
                         <i class="right fas fa-angle-left"></i>
                     </p>
-                </router-link>
+                  </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                      <router-link to="/loans" class="nav-link">
                         <i class="nav-icon fas fa-tools"></i>
                             <p>Manage Loans</p>
-                        </a>
+                      </router-link>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">

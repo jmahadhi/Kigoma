@@ -4,7 +4,7 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">List of Organisation Level</h3>
+                <h3 class="card-title">List of Organisation Group</h3>
 
                 <div class="card-tools">
                     <button class="btn btn-success" data-toggle="modal" data-target="#CreateOrganLevel">
@@ -19,8 +19,8 @@
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Organisation Code</th>
-                      <th>Organisation Name</th>
+                      <th>Organisation Group Code</th>
+                      <th>Organisation Group Name</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
@@ -39,47 +39,7 @@
                       </td>
                     </tr>
 
-                     <tr>
-                      <td>183</td>
-                      <td> OgCode02</td>
-                      <td>Regional</td>
-                      <td>
-                          <a href="#">
-                              <i class="nav-icon fa fa-edit green"></i>
-                          </a> |
-                          <a href="#" >
-                              <i class="nav-icon fa fa-trash red"></i>
-                          </a>
-                      </td>
-                    </tr>
-
-                     <tr>
-                      <td>183</td>
-                      <td> OgCode03</td>
-                      <td>District</td>
-                      <td>
-                          <a href="#">
-                              <i class="nav-icon fa fa-edit green"></i>
-                          </a> |
-                          <a href="#" >
-                              <i class="nav-icon fa fa-trash red"></i>
-                          </a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>184</td>
-                      <td> OgCode04</td>
-                      <td>LGA</td>
-                      <td>
-                          <a href="#">
-                              <i class="nav-icon fa fa-edit green"></i>
-                          </a> |
-                          <a href="#" >
-                              <i class="nav-icon fa fa-trash red"></i>
-                          </a>
-                      </td>
-                    </tr>
+                    
                   </tbody>
                 </table>
               </div>
@@ -94,7 +54,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="CreateOrganLevelModal">Add Organisation Level </h5>
+                    <h5 class="modal-title" id="CreateOrganLevelModal">Add Organisation Group </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
@@ -107,10 +67,10 @@
                                     <i class="nav-icon fas fa-sort-numeric-up"></i>
                                 </span>
                             </div>
-                            <input v-model="form.organLevelCode" type="text" name="organLevelCode" 
-                                 placeholder="Enter Organisation Code"
-                                 class="form-control" :class="{ 'is-invalid': form.errors.has('organLevelCode') }">
-                        <has-error :form="form" field="organLevelCode"></has-error>
+                            <input v-model="form.organGroupCode" type="text" name="organGroupCode" 
+                                 placeholder="Enter Organisation Group Code"
+                                 class="form-control" :class="{ 'is-invalid': form.errors.has('organGroupCode') }">
+                        <has-error :form="form" field="organGroupCode"></has-error>
                         </div>
                     </div>
 
@@ -121,10 +81,10 @@
                                     <i class="nav-icon fas fa-puzzle-piece"></i>
                                 </span>
                             </div>
-                            <input v-model="form.orgName" type="text" name="orgName"
-                                placeholder="Enter Organisation Name"
-                                class="form-control" :class="{ 'is-invalid': form.errors.has('orgName') }">
-                        <has-error :form="form" field="orgName"></has-error>
+                            <input v-model="form.orgGroupName" type="text" name="orgGroupName"
+                                placeholder="Enter Organisation Group Name"
+                                class="form-control" :class="{ 'is-invalid': form.errors.has('orgGroupName') }">
+                        <has-error :form="form" field="orgGroupName"></has-error>
                         </div>
                     </div>
 
@@ -146,8 +106,8 @@
         data() {
             return {
                 form : new Form({
-                    organLevelCode: '',
-                    orgName: '',
+                    organGroupCode: '',
+                    orgGroupName: '',
 
                 })
             }

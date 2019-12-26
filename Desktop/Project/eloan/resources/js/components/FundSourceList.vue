@@ -4,12 +4,12 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">List of Organisation Level</h3>
+                <h3 class="card-title">List of Fund Source</h3>
 
                 <div class="card-tools">
-                    <button class="btn btn-success" data-toggle="modal" data-target="#CreateOrganLevel">
+                    <button class="btn btn-success" data-toggle="modal" data-target="#CreateFundSource">
                         <i class="nav-icon fas fa-user-plus"></i>
-                        Add New
+                        New Fund
                     </button>
                 </div>
               </div>
@@ -18,17 +18,19 @@
                 <table class="table table-hover">
                   <thead>
                     <tr>
-                      <th>ID</th>
-                      <th>Organisation Code</th>
-                      <th>Organisation Name</th>
+                      <th>No.</th>
+                      <th>Fund Source Name</th>
+                      <th>Description</th>
+                      <th>Fund Source Code</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>183</td>
-                      <td> OgCode01</td>
-                      <td>National</td>
+                      <td>1</td>
+                      <td> Youth Fund Development</td>
+                      <td>This is the fund for ..../2022</td>
+                      <td>21400-0000144-001 </td>
                       <td>
                           <a href="#">
                               <i class="nav-icon fa fa-edit green"></i>
@@ -39,47 +41,6 @@
                       </td>
                     </tr>
 
-                     <tr>
-                      <td>183</td>
-                      <td> OgCode02</td>
-                      <td>Regional</td>
-                      <td>
-                          <a href="#">
-                              <i class="nav-icon fa fa-edit green"></i>
-                          </a> |
-                          <a href="#" >
-                              <i class="nav-icon fa fa-trash red"></i>
-                          </a>
-                      </td>
-                    </tr>
-
-                     <tr>
-                      <td>183</td>
-                      <td> OgCode03</td>
-                      <td>District</td>
-                      <td>
-                          <a href="#">
-                              <i class="nav-icon fa fa-edit green"></i>
-                          </a> |
-                          <a href="#" >
-                              <i class="nav-icon fa fa-trash red"></i>
-                          </a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>184</td>
-                      <td> OgCode04</td>
-                      <td>LGA</td>
-                      <td>
-                          <a href="#">
-                              <i class="nav-icon fa fa-edit green"></i>
-                          </a> |
-                          <a href="#" >
-                              <i class="nav-icon fa fa-trash red"></i>
-                          </a>
-                      </td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -90,16 +51,17 @@
         </div>
 
                 <!-- Modal -->
-        <div class="modal fade" id="CreateOrganLevel" tabindex="-1" role="dialog" aria-labelledby="CreateOrganLevelModal" aria-hidden="true">
+        <div class="modal fade" id="CreateFundSource" tabindex="-1" role="dialog" aria-labelledby="CreateFundSourceModal" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="CreateOrganLevelModal">Add Organisation Level </h5>
+                    <h5 class="modal-title" id="CreateFundSourceModal">New Fund Source </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
+
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -107,10 +69,24 @@
                                     <i class="nav-icon fas fa-sort-numeric-up"></i>
                                 </span>
                             </div>
-                            <input v-model="form.organLevelCode" type="text" name="organLevelCode" 
-                                 placeholder="Enter Organisation Code"
-                                 class="form-control" :class="{ 'is-invalid': form.errors.has('organLevelCode') }">
-                        <has-error :form="form" field="organLevelCode"></has-error>
+                            <input v-model="form.fundSourceCode" type="text" name="fundSourceCode" 
+                                 placeholder="Enter Fund Source Code"
+                                 class="form-control" :class="{ 'is-invalid': form.errors.has('fundSourceCode') }">
+                        <has-error :form="form" field="fundSourceCode"></has-error>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nav-icon fas fa-sort-numeric-up"></i>
+                                </span>
+                            </div>
+                            <input v-model="form.fundSourceName" type="text" name="fundSourceName" 
+                                 placeholder="Enter Fund Source Name"
+                                 class="form-control" :class="{ 'is-invalid': form.errors.has('fundSourceName') }">
+                        <has-error :form="form" field="fundSourceName"></has-error>
                         </div>
                     </div>
 
@@ -121,10 +97,11 @@
                                     <i class="nav-icon fas fa-puzzle-piece"></i>
                                 </span>
                             </div>
-                            <input v-model="form.orgName" type="text" name="orgName"
-                                placeholder="Enter Organisation Name"
-                                class="form-control" :class="{ 'is-invalid': form.errors.has('orgName') }">
-                        <has-error :form="form" field="orgName"></has-error>
+                            <textarea v-model="form.fundSourceDescr" type="text" name="fundSourceDescr"
+                                placeholder="Enter Fund Source Description"
+                                class="form-control" :class="{ 'is-invalid': form.errors.has('fundSourceDescr') }">
+                            </textarea>
+                        <has-error :form="form" field="fundSourceDescr"></has-error>
                         </div>
                     </div>
 
@@ -146,8 +123,9 @@
         data() {
             return {
                 form : new Form({
-                    organLevelCode: '',
-                    orgName: '',
+                    fundSourceCode: '',
+                    fundSourceName: '',
+                    fundSourceDescr: ''
 
                 })
             }
