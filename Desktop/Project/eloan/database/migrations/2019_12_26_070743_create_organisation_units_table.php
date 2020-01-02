@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrganisationLevelTable extends Migration
+class CreateOrganisationUnitsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateOrganisationLevelTable extends Migration
      */
     public function up()
     {
-        Schema::create('organisation_level', function (Blueprint $table) {
+        Schema::create('organisation_units', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('orgUnitCode');
+            $table->string('orgUnitCode');
             $table->string('orgUnitName');
-            $table->unsignedBigInteger('orgUnit_id');
-            $table->foreign('orgUnit_id')->references('id')->on('organisation_unit');
+            $table->unsignedBigInteger('orgGroup_id');
+            $table->foreign('orgGroup_id')->references('id')->on('organisation_groups');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateOrganisationLevelTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('organisation_level');
+        Schema::dropIfExists('organisation_units');
     }
 }

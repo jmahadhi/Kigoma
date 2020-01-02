@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrganisationUnitTable extends Migration
+class CreateMemberGroupCatsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateOrganisationUnitTable extends Migration
      */
     public function up()
     {
-        Schema::create('organisation_unit', function (Blueprint $table) {
+        Schema::create('member_group_cats', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('orgUnitCode');
-            $table->string('orgUnitName');
-            $table->unsignedBigInteger('orgGroup_id');
-            $table->foreign('orgGroup_id')->references('id')->on('organisation_group');
+            $table->string('Cat_code');
+            $table->string('Cat_name');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateOrganisationUnitTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('organisation_unit');
+        Schema::dropIfExists('member_group_cats');
     }
 }

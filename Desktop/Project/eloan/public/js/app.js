@@ -2941,17 +2941,58 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      orgGoups: [],
       form: new Form({
-        organGroupCode: '',
+        orgGroupCode: '',
         orgGroupName: ''
       })
     };
   },
+  methods: {
+    getOrgGroup: function getOrgGroup() {
+      var _this = this;
+
+      axios.get('/organisationGroups').then(function (response) {
+        console.log('result', response.data);
+        _this.orgGoups = response.data;
+      });
+    },
+    CreateOrgGroup: function CreateOrgGroup() {
+      var input = this.form;
+      axios.post('/storeOrgGroup', input).then(function (response) {
+        _this.getOrgGroup();
+      });
+    } // CreateOrgGroup() {
+    //   this.form.post('api/organisationGroups');
+    // }
+
+  },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    this.getOrgGroup();
   }
 });
 
@@ -3134,33 +3175,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -42728,7 +42742,42 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container pt-5" }, [
-    _vm._m(0),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "card" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body table-responsive p-0" }, [
+            _c("table", { staticClass: "table table-hover" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c(
+                "tbody",
+                [
+                  _vm._v(
+                    "\n              " +
+                      _vm._s(_vm.orgGoups) +
+                      "\n              "
+                  ),
+                  _vm._l(_vm.orgGoups, function(orgGoup) {
+                    return _c("tr", { key: orgGoup.id }, [
+                      _c("td", [_vm._v(_vm._s(orgGoup.id))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(orgGoup.orgGroupCode))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(orgGoup.orgGroupName))]),
+                      _vm._v(" "),
+                      _vm._m(2, true)
+                    ])
+                  })
+                ],
+                2
+              )
+            ])
+          ])
+        ])
+      ])
+    ]),
     _vm._v(" "),
     _c(
       "div",
@@ -42751,107 +42800,122 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "modal-content" }, [
-              _vm._m(1),
+              _vm._m(3),
               _vm._v(" "),
-              _c("div", { staticClass: "modal-body" }, [
-                _c("div", { staticClass: "form-group" }, [
-                  _c(
-                    "div",
-                    { staticClass: "input-group" },
-                    [
-                      _vm._m(2),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.organGroupCode,
-                            expression: "form.organGroupCode"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        class: {
-                          "is-invalid": _vm.form.errors.has("organGroupCode")
-                        },
-                        attrs: {
-                          type: "text",
-                          name: "organGroupCode",
-                          placeholder: "Enter Organisation Group Code"
-                        },
-                        domProps: { value: _vm.form.organGroupCode },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
+              _c(
+                "form",
+                {
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.CreateOrgGroup($event)
+                    }
+                  }
+                },
+                [
+                  _c("div", { staticClass: "modal-body" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "div",
+                        { staticClass: "input-group" },
+                        [
+                          _vm._m(4),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.orgGroupCode,
+                                expression: "form.orgGroupCode"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("orgGroupCode")
+                            },
+                            attrs: {
+                              type: "text",
+                              id: "orgGroupCode",
+                              name: "orgGroupCode",
+                              placeholder: "Enter Organisation Group Code"
+                            },
+                            domProps: { value: _vm.form.orgGroupCode },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.form,
+                                  "orgGroupCode",
+                                  $event.target.value
+                                )
+                              }
                             }
-                            _vm.$set(
-                              _vm.form,
-                              "organGroupCode",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("has-error", {
-                        attrs: { form: _vm.form, field: "organGroupCode" }
-                      })
-                    ],
-                    1
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c(
-                    "div",
-                    { staticClass: "input-group" },
-                    [
-                      _vm._m(3),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.orgGroupName,
-                            expression: "form.orgGroupName"
-                          }
+                          }),
+                          _vm._v(" "),
+                          _c("has-error", {
+                            attrs: { form: _vm.form, field: "orgGroupCode" }
+                          })
                         ],
-                        staticClass: "form-control",
-                        class: {
-                          "is-invalid": _vm.form.errors.has("orgGroupName")
-                        },
-                        attrs: {
-                          type: "text",
-                          name: "orgGroupName",
-                          placeholder: "Enter Organisation Group Name"
-                        },
-                        domProps: { value: _vm.form.orgGroupName },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
+                        1
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "div",
+                        { staticClass: "input-group" },
+                        [
+                          _vm._m(5),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.orgGroupName,
+                                expression: "form.orgGroupName"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("orgGroupName")
+                            },
+                            attrs: {
+                              type: "text",
+                              id: "orgGroupName",
+                              name: "orgGroupName",
+                              placeholder: "Enter Organisation Group Name"
+                            },
+                            domProps: { value: _vm.form.orgGroupName },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.form,
+                                  "orgGroupName",
+                                  $event.target.value
+                                )
+                              }
                             }
-                            _vm.$set(
-                              _vm.form,
-                              "orgGroupName",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("has-error", {
-                        attrs: { form: _vm.form, field: "orgGroupName" }
-                      })
-                    ],
-                    1
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _vm._m(4)
+                          }),
+                          _vm._v(" "),
+                          _c("has-error", {
+                            attrs: { form: _vm.form, field: "orgGroupName" }
+                          })
+                        ],
+                        1
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(6)
+                ]
+              )
             ])
           ]
         )
@@ -42864,68 +42928,56 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _c("h3", { staticClass: "card-title" }, [
-              _vm._v("List of Organisation Group")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-tools" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-success",
-                  attrs: {
-                    "data-toggle": "modal",
-                    "data-target": "#CreateOrganLevel"
-                  }
-                },
-                [
-                  _c("i", { staticClass: "nav-icon fas fa-user-plus" }),
-                  _vm._v("\n                    Add New\n                ")
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body table-responsive p-0" }, [
-            _c("table", { staticClass: "table table-hover" }, [
-              _c("thead", [
-                _c("tr", [
-                  _c("th", [_vm._v("ID")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Organisation Group Code")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Organisation Group Name")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Actions")])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tbody", [
-                _c("tr", [
-                  _c("td", [_vm._v("183")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(" OgCode01")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("National")]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "nav-icon fa fa-edit green" })
-                    ]),
-                    _vm._v(" |\n                      "),
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "nav-icon fa fa-trash red" })
-                    ])
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h3", { staticClass: "card-title" }, [
+        _vm._v("List of Organisation Group")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-tools" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-success",
+            attrs: {
+              "data-toggle": "modal",
+              "data-target": "#CreateOrganLevel"
+            }
+          },
+          [
+            _c("i", { staticClass: "nav-icon fas fa-user-plus" }),
+            _vm._v("\n              Add New\n            ")
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("ID")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Organisation Group Code")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Organisation Group Name")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Actions")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("a", { attrs: { href: "#" } }, [
+        _c("i", { staticClass: "nav-icon fa fa-edit green" })
+      ]),
+      _vm._v(" |\n                  "),
+      _c("a", { attrs: { href: "#" } }, [
+        _c("i", { staticClass: "nav-icon fa fa-trash red" })
       ])
     ])
   },
@@ -42937,7 +42989,7 @@ var staticRenderFns = [
       _c(
         "h5",
         { staticClass: "modal-title", attrs: { id: "CreateOrganLevelModal" } },
-        [_vm._v("Add Organisation Group ")]
+        [_vm._v("Add Organisation Group")]
       ),
       _vm._v(" "),
       _c(
@@ -42987,16 +43039,16 @@ var staticRenderFns = [
         },
         [
           _c("i", { staticClass: "nav-icon fas fa-window-close fa-fw" }),
-          _vm._v("Close")
+          _vm._v("Close\n            ")
         ]
       ),
       _vm._v(" "),
       _c(
         "button",
-        { staticClass: "btn btn-primary", attrs: { type: "button" } },
+        { staticClass: "btn btn-primary", attrs: { type: "submit" } },
         [
           _c("i", { staticClass: "nav-icon fas fa-save fa-fw" }),
-          _vm._v("Create")
+          _vm._v("Create\n            ")
         ]
       )
     ])
@@ -43363,379 +43415,8 @@ render._withStripped = true
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container pt-5" }, [
-    _vm._m(0),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "modal fade",
-        attrs: {
-          id: "CreateOrganUnit",
-          tabindex: "-1",
-          role: "dialog",
-          "aria-labelledby": "CreateOrganUnitModal",
-          "aria-hidden": "true"
-        }
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass: "modal-dialog modal-dialog-centered",
-            attrs: { role: "document" }
-          },
-          [
-            _c("div", { staticClass: "modal-content" }, [
-              _vm._m(1),
-              _vm._v(" "),
-              _c("div", { staticClass: "modal-body" }, [
-                _vm._m(2),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c(
-                    "div",
-                    { staticClass: "input-group" },
-                    [
-                      _vm._m(3),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.firstName,
-                            expression: "form.firstName"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        class: {
-                          "is-invalid": _vm.form.errors.has("organLevelCode")
-                        },
-                        attrs: {
-                          type: "text",
-                          name: "organLevelCode",
-                          placeholder: "Enter Organisation Code"
-                        },
-                        domProps: { value: _vm.form.firstName },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(_vm.form, "firstName", $event.target.value)
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("has-error", {
-                        attrs: { form: _vm.form, field: "organLevelCode" }
-                      })
-                    ],
-                    1
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c(
-                    "div",
-                    { staticClass: "input-group" },
-                    [
-                      _vm._m(4),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.middleName,
-                            expression: "form.middleName"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        class: { "is-invalid": _vm.form.errors.has("orgName") },
-                        attrs: {
-                          type: "text",
-                          name: "orgName",
-                          placeholder: "Enter Organisation Name"
-                        },
-                        domProps: { value: _vm.form.middleName },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.form,
-                              "middleName",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("has-error", {
-                        attrs: { form: _vm.form, field: "orgName" }
-                      })
-                    ],
-                    1
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _vm._m(5)
-            ])
-          ]
-        )
-      ]
-    )
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _c("h3", { staticClass: "card-title" }, [
-              _vm._v("List of Organisation Unit")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-tools" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-success",
-                  attrs: {
-                    "data-toggle": "modal",
-                    "data-target": "#CreateOrganUnit"
-                  }
-                },
-                [
-                  _c("i", { staticClass: "nav-icon fas fa-user-plus" }),
-                  _vm._v("\n                    Add New\n                ")
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body table-responsive p-0" }, [
-            _c("table", { staticClass: "table table-hover" }, [
-              _c("thead", [
-                _c("tr", [
-                  _c("th", [_vm._v("ID")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Organisation Level")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Unit Code")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Organisation Name")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Actions")])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tbody", [
-                _c("tr", [
-                  _c("td", [_vm._v("183")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Tanzania")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(" OgCode01")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("National")]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "nav-icon fa fa-edit green" })
-                    ]),
-                    _vm._v(" |\n                      "),
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "nav-icon fa fa-trash red" })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("tr", [
-                  _c("td", [_vm._v("183")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Kigoma")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(" OgCode02")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Regional")]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "nav-icon fa fa-edit green" })
-                    ]),
-                    _vm._v(" |\n                      "),
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "nav-icon fa fa-trash red" })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("tr", [
-                  _c("td", [_vm._v("183")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Buhigwe Dc")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(" OgCode03")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("District")]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "nav-icon fa fa-edit green" })
-                    ]),
-                    _vm._v(" |\n                      "),
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "nav-icon fa fa-trash red" })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("tr", [
-                  _c("td", [_vm._v("184")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Buhigwe")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(" OgCode04")]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("LGA")]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "nav-icon fa fa-edit green" })
-                    ]),
-                    _vm._v(" |\n                      "),
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "nav-icon fa fa-trash red" })
-                    ])
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-header" }, [
-      _c(
-        "h5",
-        { staticClass: "modal-title", attrs: { id: "CreateOrganUnitModal" } },
-        [_vm._v("Add Unit ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "close",
-          attrs: {
-            type: "button",
-            "data-dismiss": "modal",
-            "aria-label": "Close"
-          }
-        },
-        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("div", { staticClass: "input-group" }, [
-        _c("div", { staticClass: "input-group-prepend" }, [
-          _c("span", { staticClass: "input-group-text" }, [
-            _c("i", { staticClass: "nav-icon fas fa-user-tag" })
-          ])
-        ]),
-        _vm._v(" "),
-        _c(
-          "select",
-          {
-            staticClass: "form-control",
-            attrs: { id: "UserRole", name: "organisationName" }
-          },
-          [
-            _c("option", [_vm._v("Select Organisation Name")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "1" } }, [_vm._v("Tanzania")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "2" } }, [_vm._v("Dar Es Salaam")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "3" } }, [_vm._v("Mbeya")]),
-            _vm._v(" "),
-            _c("option", { attrs: { value: "4" } }, [_vm._v("Kigoma")])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input-group-prepend" }, [
-      _c("span", { staticClass: "input-group-text" }, [
-        _c("i", { staticClass: "nav-icon fas fa-sort-numeric-up" })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input-group-prepend" }, [
-      _c("span", { staticClass: "input-group-text" }, [
-        _c("i", { staticClass: "nav-icon fas fa-puzzle-piece" })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-footer" }, [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-danger",
-          attrs: { type: "button", "data-dismiss": "modal" }
-        },
-        [
-          _c("i", { staticClass: "nav-icon fas fa-window-close fa-fw" }),
-          _vm._v("Close")
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        { staticClass: "btn btn-primary", attrs: { type: "button" } },
-        [
-          _c("i", { staticClass: "nav-icon fas fa-save fa-fw" }),
-          _vm._v("Create")
-        ]
-      )
-    ])
-  }
-]
-render._withStripped = true
+var render = function () {}
+var staticRenderFns = []
 
 
 

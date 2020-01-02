@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateQuarterTable extends Migration
+class CreateLoansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateQuarterTable extends Migration
      */
     public function up()
     {
-        Schema::create('quarter', function (Blueprint $table) {
+        Schema::create('loans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('quarterCode');
-            $table->string('quarterName');
-            $table->date('startDate');
-            $table->date('endDate');
-            $table->unsignedBigInteger('fyId');
-            $table->foreign('fyId')->references('id')->on('financial_year');
+            $table->string('loanCode');
+            $table->string('loanName');
+            $table->string('loanType');
+            $table->bigInteger('amount');
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class CreateQuarterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('quarter');
+        Schema::dropIfExists('loans');
     }
 }
