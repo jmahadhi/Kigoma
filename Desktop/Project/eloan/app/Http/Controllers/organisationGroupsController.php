@@ -14,16 +14,9 @@ class organisationGroupsController extends Controller
      */
     public function index()
     {
-        return organisationGroup::latest()->paginate(10);
-        // return organisationGroup::all();
+        // return organisationGroup::latest()->paginate(10);
+        return organisationGroup::all();
     }
-
-    public function getItems(Request $request)
-    {
-        $data = organisationGroup::latest()->paginate(10);
-        return $data;
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -42,17 +35,15 @@ class organisationGroupsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'orgGroupCode' => 'required|string|max:10',
-            'orgGroupName' => 'required|string|max:191'
+        $this->validate($request,[
+            'orgGroupCode' => 'required|string|unique:organisation_groups|max:10',
+            'orgGroupName' => 'required|string|unique:organisation_groups|max:191'
         ]);
 
-        $data = new organisationGroup();
-        $data->orgGroupCode = $request->orgGroupCode;
-        $data->orgGroupName = $request->orgGroupName;
-        $data->save();
-        
-        return $data;
+        return organisationGroup::create([
+            'orgGroupCode' => $request['orgGroupCode'],
+            'orgGroupName' => $request['orgGroupName']
+        ]);
     }
 
     /**
@@ -86,7 +77,12 @@ class organisationGroupsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $orgGroup = organisationGroup::findOrFail($id);
+        $this->validate($request,[
+            'orgGroupCode' => 'required|string|max:10|unique:organisation_groups,orgGroupCode,'.$orgGroup->id,
+            'orgGroupName' => 'required|string|max:191|unique:organisation_groups,orgGroupName,'.$orgGroup->id,
+        ]);
+        $orgGroup->update($request->all());
     }
 
     /**
@@ -97,6 +93,12 @@ class organisationGroupsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $orgGroup = organisationGroup::findOrFail($id);
+
+        //Delete User
+        $orgGroup->delete();
+
+        return ['message' => 'Org Group Deleted'];
+
     }
 }
