@@ -34,7 +34,7 @@
                       <td>
                           <a href="#">
                               <i class="nav-icon fa fa-edit green"></i>
-                          </a> /
+                          </a> |
                           <a href="#">
                               <i class="nav-icon fa fa-trash red"></i>
                           </a>

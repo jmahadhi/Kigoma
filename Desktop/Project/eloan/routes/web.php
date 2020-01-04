@@ -17,6 +17,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('{path}',"HomeController@index")->where( 'path', '([A-z\d-\/_.]+)?');
+
+Route::post('/storeOrgGroup', 'organisationGroupsController@store');
+
+Route::get('/getOrgGroup', 'organisationGroupsController@getItems');
+Route::get('{path?}', function($path = null) {
+    return ('ok');
+})->where('path', '.*');

@@ -109,28 +109,35 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-stream"></i>
-                            <p>Organisation Level</p>
-                            </a>
+                          <router-link to="/organisationGroup" class="nav-link">
+                          <i class="nav-icon fas fa-object-ungroup"></i>
+                            <p>Organisation Group</p>
+                          </router-link>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <router-link to="/organisationLevel" class="nav-link">
+                              <i class="nav-icon fas fa-stream"></i>
+                              <p>Organisation Level</p>
+                            </router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-sort-amount-down-alt"></i>
-                            <p>Organisation Unit</p>
-                            </a>
+                            <router-link to="/organisationUnit" class="nav-link">
+                              <i class="nav-icon fas fa-sort-amount-down-alt"></i>
+                              <p>Organisation Unit</p>
+                            </router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-hourglass-half"></i>
-                            <p>Financial Year</p>
-                            </a>
+                            <router-link to="/financialYear" class="nav-link">
+                              <i class="nav-icon fas fa-hourglass-half"></i>
+                              <p>Financial Year</p>
+                            </router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-clock"></i>
-                            <p>Quarter</p>
-                            </a>
+                            <router-link to="/quarter" class="nav-link">
+                              <i class="nav-icon fas fa-clock"></i>
+                              <p>Quarter</p>
+                            </router-link>
                         </li>
                     </ul>
                 </li>
@@ -165,18 +172,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                            <router-link to="/groupDetails" class="nav-link">
+                                <i class=" nav-icon fas fa-list-ol"></i>
+                                <p>Group Details</p>
+                            </router-link>
+                        </li>
+
                         <li class="nav-item">
                             <a href="#" class="nav-link active">
                                 <i class="nav-icon fas fa-layer-group"></i>
                                 <p>Register Group</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class=" nav-icon fas fa-list-ol"></i>
-                                <p>Group List</p>
-                            </a>
-                        </li>
+                        
                     </ul>
                 </li>
               <li class="nav-item has-treeview menu-close">
@@ -188,10 +197,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                      <a href="#" class="nav-link">
+                      <router-link to="/fundReceivable" class="nav-link">
                       <i class="nav-icon fas fa-donate"></i>
                           <p>Funds Receivable</p>
-                      </a>
+                      </router-link>
                   </li>
                   <li class="nav-item">
                       <a href="#" class="nav-link">
@@ -200,26 +209,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a href="#" class="nav-link">
+                      <router-link to="/fundSource" class="nav-link">
                           <i class="nav-icon fas fa-list-alt"></i>
                           <p>Funds Source Listing</p>
-                      </a>
+                      </router-link>
                   </li>
                 </ul>
               </li>
               <li class="nav-item has-treeview menu-close">
-                <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-hand-holding-usd"></i>
+                  <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-hand-holding-usd"></i>
                     <p> Loans
                         <i class="right fas fa-angle-left"></i>
                     </p>
-                </a>
+                  </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                      <router-link to="/loans" class="nav-link">
                         <i class="nav-icon fas fa-tools"></i>
                             <p>Manage Loans</p>
-                        </a>
+                      </router-link>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">

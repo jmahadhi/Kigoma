@@ -23,6 +23,16 @@ let routes = [
     { path: '/role', component: require('./components/UserRoles.vue').default },
     { path: '/user', component: require('./components/Users.vue').default},
     { path: '/profile', component: require('./components/Profile.vue').default },
+    { path: '/organisationGroup', component: require('./components/OrganisationGroup.vue').default},
+    { path: '/organisationLevel', component: require('./components/OrganisationLevel.vue').default},
+    { path: '/organisationUnit', component: require('./components/OrganisationUnit.vue').default},
+    { path: '/financialYear', component: require('./components/FinancialYear.vue').default},
+    { path: '/quarter', component: require('./components/Quarter.vue').default},
+    { path: '/groupDetails', component: require('./components/GroupDetails.vue').default},
+    { path: '/previewMember', component: require('./components/PreviewMember.vue').default},
+    { path: '/fundReceivable', component: require('./components/FundReceivable.vue').default},
+    { path: '/loans', component: require('./components/Loans.vue').default},
+    { path: '/fundSource', component: require('./components/FundSourceList.vue').default},
   ]
 
 const router = new VueRouter({
