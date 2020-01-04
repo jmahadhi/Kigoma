@@ -7,13 +7,14 @@
             <h3 class="card-title">List of Organisation Group</h3>
 
             <div class="card-tools">
-              <button class="btn btn-success" data-toggle="modal" data-target="#CreateOrganLevel">
+              <button class="btn btn-success" @click="newModal">
                 <i class="nav-icon fas fa-user-plus"></i>
                 Add New
               </button>
             </div>
           </div>
           <!-- /.card-header -->
+
           <div class="card-body table-responsive p-0">
             <table class="table table-hover">
               <thead>
@@ -25,16 +26,15 @@
                 </tr>
               </thead>
               <tbody>
-                {{orgGoups}}
-                <tr v-for="orgGoup in orgGoups" :key="orgGoup.id">
-                  <td>{{orgGoup.id}}</td>
-                  <td>{{orgGoup.orgGroupCode}}</td>
-                  <td>{{orgGoup.orgGroupName}}</td>
+                <tr v-for="orgGroup in orgGroups" :key="orgGroup.id">
+                  <td>{{orgGroup.id}}</td>
+                  <td>{{orgGroup.orgGroupCode}}</td>
+                  <td>{{orgGroup.orgGroupName}}</td>
                   <td>
-                    <a href="#">
+                    <a href="#" @click="editModal(orgGroup)">
                       <i class="nav-icon fa fa-edit green"></i>
                     </a> |
-                    <a href="#">
+                    <a href="#" @click="deleteOrgGrp(orgGroup.id)">
                       <i class="nav-icon fa fa-trash red"></i>
                     </a>
                   </td>
@@ -51,21 +51,23 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="CreateOrganLevel"
+      id="CreateOrganGrp"
       tabindex="-1"
       role="dialog"
-      aria-labelledby="CreateOrganLevelModal"
+      aria-labelledby="CreateOrganGrpModal"
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="CreateOrganLevelModal">Add Organisation Group</h5>
+            <h5 class="modal-title" v-show="editmode" id="CreateOrganGrpModal">Update Organisation Group</h5>
+            <h5 class="modal-title" v-show="!editmode" id="CreateOrganGrpModal">Add Organisation Group</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form @submit.prevent="CreateOrgGroup">
+
+          <form @submit.prevent="editmode ? updateOrgGroup() : CreateOrgGroup()">
             <div class="modal-body">
               <div class="form-group">
                 <div class="input-group">
@@ -107,11 +109,15 @@
                 </div>
               </div>
             </div>
+
             <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-dismiss="modal">
                 <i class="nav-icon fas fa-window-close fa-fw"></i>Close
               </button>
-              <button type="submit" class="btn btn-primary">
+              <button type="submit" v-show="editmode" class="btn btn-success">
+                <i class="nav-icon fas fa-save fa-fw"></i>Update
+              </button>
+              <button type="submit" v-show="!editmode" class="btn btn-primary">
                 <i class="nav-icon fas fa-save fa-fw"></i>Create
               </button>
             </div>
@@ -126,37 +132,94 @@
 export default {
   data() {
     return {
-      orgGoups:[],
+      editmode: false,
+      orgGroups: {},
       form: new Form({
+        id: '',
         orgGroupCode: '',
         orgGroupName: ''
       })
     };
   },
   methods: {
-    getOrgGroup: function getOrgGroup() {
-      var _this = this;
-      axios.get('/organisationGroups').then(function (response) {
-        console.log('result', response.data);
-        _this.orgGoups = response.data;
-
-      });
+    updateOrgGroup() {
+      // console.log('edit mode click')
+       this.$Progress.start();
+       this.form.put('api/orgGroup/'+this.form.id)
+       .then(() =>{
+          $('#CreateOrganGrp').modal('hide');
+           Swal.fire('Update!', 'Organisation Group has been Updated Successfully!.', 'success');
+           this.$Progress.finish();
+            Fire.$emit('AfterSubmit');
+       })
+       .catch(() => {
+          this.$Progress.fail();
+       })
     },
 
-    CreateOrgGroup: function CreateOrgGroup() {
-     var input = this.form
-     axios.post('/storeOrgGroup', input).then(function(response){
-       _this.getOrgGroup();
+    editModal(orgGroup) {
+      this.editmode = true;
+      this.form.reset();
+       $('#CreateOrganGrp').modal('show');
+       this.form.fill(orgGroup);
+    },
 
-     });
+    newModal() {
+      this.editmode = false;
+      this.form.reset();
+       $('#CreateOrganGrp').modal('show');
+    },
+
+    deleteOrgGrp(id) {
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then(result => {
+          // Send Request to the serve
+          if (result.value) {
+            this.form.delete('api/orgGroup/'+ id).then(() => {
+                Swal.fire('Deleted!', 'Organisation Group has been deleted.', 'success');
+            Fire.$emit('AfterSubmit');
+           }).catch(() => {
+                Swal.fire('Failed', 'There is SomeThing Wronge', 'Warning');
+            })
+          }
+         
+        });
+    },
+    getOrgGroup() {
+      axios.get('api/orgGroup').then(({ data }) => (this.orgGroups = data));
+    },
+
+    CreateOrgGroup() {
+      this.$Progress.start();
+      this.form
+        .post('api/orgGroup')
+        .then(() => {
+          Fire.$emit('AfterSubmit');
+          $('#CreateOrganGrp').modal('hide');
+
+          Toast.fire({
+            icon: 'success',
+            title: 'Organisation Group Created successfully'
+          });
+
+          this.$Progress.finish();
+        })
+        .catch(() => {});
     }
-    // CreateOrgGroup() {
-    //   this.form.post('api/organisationGroups');
-    // }
   },
 
-  mounted: function mounted() {
+  created() {
     this.getOrgGroup();
+    Fire.$on('AfterSubmit', () => {
+      this.getOrgGroup();
+    });
   }
 };
 </script>

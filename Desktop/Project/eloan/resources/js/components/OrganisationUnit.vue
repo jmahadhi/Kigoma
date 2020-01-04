@@ -68,69 +68,69 @@
           </div>
           <form @submit.prevent="createOrgUnit">
             <div class="modal-body">
-
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                            <i class="nav-icon fas fa-user-tag"></i>
-                            </span>
-                        </div>
-                        <select class="form-control" id="UserRole" name="organisationName">
-                            <option>Select Organisation Name</option>
-                            <option value="1">Tanzania</option>
-                            <option value="2">Dar Es Salaam</option>
-                            <option value="3">Mbeya</option>
-                            <option value="4">Kigoma</option>
-                        </select>
-                    </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="nav-icon fas fa-user-tag"></i>
+                    </span>
+                  </div>
+                  <select class="form-control" id="UserRole" name="organisationName">
+                    <option>Select Organisation Name</option>
+                    <option value="1">Tanzania</option>
+                    <option value="2">Dar Es Salaam</option>
+                    <option value="3">Mbeya</option>
+                    <option value="4">Kigoma</option>
+                  </select>
                 </div>
+              </div>
 
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                            <i class="nav-icon fas fa-sort-numeric-up"></i>
-                            </span>
-                        </div>
-                        <input
-                            v-model="form.firstName"
-                            type="text"
-                            name="organLevelCode"
-                            placeholder="Enter Organisation Code"
-                            class="form-control"
-                            :class="{ 'is-invalid': form.errors.has('organLevelCode') }"
-                        />
-                        <has-error :form="form" field="organLevelCode"></has-error>
-                        </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="nav-icon fas fa-sort-numeric-up"></i>
+                    </span>
+                  </div>
+                  <input
+                    v-model="form.firstName"
+                    type="text"
+                    name="organLevelCode"
+                    placeholder="Enter Organisation Code"
+                    class="form-control"
+                    :class="{ 'is-invalid': form.errors.has('organLevelCode') }"
+                  />
+                  <has-error :form="form" field="organLevelCode"></has-error>
                 </div>
+              </div>
 
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                            <i class="nav-icon fas fa-puzzle-piece"></i>
-                            </span>
-                        </div>
-                        <input
-                            v-model="form.middleName"
-                            type="text"
-                            name="orgName"
-                            placeholder="Enter Organisation Name"
-                            class="form-control"
-                            :class="{ 'is-invalid': form.errors.has('orgName') }"
-                        />
-                        <has-error :form="form" field="orgName"></has-error>
-                        </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="nav-icon fas fa-puzzle-piece"></i>
+                    </span>
+                  </div>
+                  <input
+                    v-model="form.middleName"
+                    type="text"
+                    name="orgName"
+                    placeholder="Enter Organisation Name"
+                    class="form-control"
+                    :class="{ 'is-invalid': form.errors.has('orgName') }"
+                  />
+                  <has-error :form="form" field="orgName"></has-error>
                 </div>
+              </div>
 
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
-                <i class="nav-icon fas fa-window-close fa-fw"></i>Close
-              </button>
-              <button type="button" class="btn btn-primary">
-                <i class="nav-icon fas fa-save fa-fw"></i>Create
-              </button>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">
+                  <i class="nav-icon fas fa-window-close fa-fw"></i>Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  <i class="nav-icon fas fa-save fa-fw"></i>Create
+                </button>
+              </div>
             </div>
           </form>
         </div>
